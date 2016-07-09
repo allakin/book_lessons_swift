@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var nameField: UITextField!
+	@IBOutlet weak var numberField: UITextField!
+	
+	//закрытие клавиатуры когда прошло касание
+	@IBAction func textFieldDoneEditing(sender: UITextField) {
+		sender.resignFirstResponder()
+	}
+	
+	//закрытие цифирной клавиатуры когда прошло касание
+	@IBAction func backgroundTap(sender: UIControl) {
+		nameField.resignFirstResponder()
+		numberField.resignFirstResponder()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
@@ -22,4 +36,3 @@ class ViewController: UIViewController {
 
 
 }
-

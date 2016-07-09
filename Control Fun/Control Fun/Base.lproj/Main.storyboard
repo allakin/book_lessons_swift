@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,38 +15,20 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" highlightedImage="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qky-ym-8Og">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="apress_logo" highlightedImage="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qky-ym-8Og">
                                 <rect key="frame" x="214" y="56" width="172" height="80"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lf2-hj-bCX">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="5Pj-bE-6lq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5Pj-bE-6lq"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="5Pj-bE-6lq"/>
-                                    </mask>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ja5-nS-bN2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Ja5-nS-bN2">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="VxF-Zp-Dbx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="VxF-Zp-Dbx"/>
@@ -56,52 +39,68 @@
                                         <include reference="VxF-Zp-Dbx"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="uyR-xK-pla"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-og-dDG">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="131" width="50" height="21"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcZ-iC-GCT">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="178" width="67" height="21"/>
-                                </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lf2-hj-bCX">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="5Pj-bE-6lq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Pj-bE-6lq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Pj-bE-6lq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="6H5-oe-nSC"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.79062089152977266" blue="0.030378438566355331" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ja5-nS-bN2" firstAttribute="top" secondItem="lf2-hj-bCX" secondAttribute="bottom" constant="19" id="0KN-4i-TtA"/>
-                            <constraint firstItem="op1-og-dDG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="1ap-iD-ABp"/>
                             <constraint firstItem="op1-og-dDG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5cP-Ov-gFO"/>
                             <constraint firstItem="lf2-hj-bCX" firstAttribute="top" secondItem="qky-ym-8Og" secondAttribute="bottom" constant="20" id="6QE-HE-Va3"/>
+                            <constraint firstItem="op1-og-dDG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="7WK-VF-mAu"/>
                             <constraint firstItem="lf2-hj-bCX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hn0-Fa-k6B"/>
                             <constraint firstItem="qky-ym-8Og" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="LZx-9l-yFy"/>
                             <constraint firstItem="DcZ-iC-GCT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="178" id="QIU-PT-S74"/>
                             <constraint firstItem="Ja5-nS-bN2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WuE-6j-PaF"/>
                             <constraint firstItem="DcZ-iC-GCT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bzn-Ei-h45"/>
-                            <constraint firstItem="qky-ym-8Og" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="3" id="eRe-1J-UTr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qky-ym-8Og" secondAttribute="trailing" constant="94" id="rem-Tv-xyv"/>
+                            <constraint firstItem="qky-ym-8Og" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="3" id="zYe-1K-S7r"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="lf2-hj-bCX"/>
                                 <exclude reference="Ja5-nS-bN2"/>
                                 <exclude reference="op1-og-dDG"/>
                                 <exclude reference="DcZ-iC-GCT"/>
+                                <exclude reference="lf2-hj-bCX"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="LZx-9l-yFy"/>
-                                <exclude reference="eRe-1J-UTr"/>
                                 <exclude reference="rem-Tv-xyv"/>
-                                <exclude reference="1ap-iD-ABp"/>
                                 <exclude reference="5cP-Ov-gFO"/>
                                 <exclude reference="QIU-PT-S74"/>
                                 <exclude reference="bzn-Ei-h45"/>
@@ -113,16 +112,14 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="lf2-hj-bCX"/>
                                 <include reference="Ja5-nS-bN2"/>
                                 <include reference="op1-og-dDG"/>
                                 <include reference="DcZ-iC-GCT"/>
+                                <include reference="lf2-hj-bCX"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="LZx-9l-yFy"/>
-                                <include reference="eRe-1J-UTr"/>
                                 <include reference="rem-Tv-xyv"/>
-                                <include reference="1ap-iD-ABp"/>
                                 <include reference="5cP-Ov-gFO"/>
                                 <include reference="QIU-PT-S74"/>
                                 <include reference="bzn-Ei-h45"/>
@@ -132,7 +129,14 @@
                                 <include reference="WuE-6j-PaF"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="pvs-Ea-gKJ"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="lf2-hj-bCX" id="bhm-YE-FOE"/>
+                        <outlet property="numberField" destination="Ja5-nS-bN2" id="t7i-6W-9nf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
