@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var nameField: UITextField!
 	@IBOutlet weak var numberField: UITextField!
+	@IBOutlet weak var sliderLabel: UILabel!
+	
 	
 	//закрытие клавиатуры когда прошло касание
 	@IBAction func textFieldDoneEditing(sender: UITextField) {
@@ -23,6 +25,15 @@ class ViewController: UIViewController {
 		nameField.resignFirstResponder()
 		numberField.resignFirstResponder()
 	}
+	
+	//связываем слайдер
+	@IBAction func sliderChanged(sender: UISlider) {
+		//выдаем значение перездвигая ползунок округляя его до ближайщего целого значения
+		let progress = lroundf(sender.value)
+		//выводим значение в label
+		sliderLabel.text = "\(progress)"
+	}
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

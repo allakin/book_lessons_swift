@@ -82,14 +82,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="560-qE-B41">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="560-qE-B41">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="246" id="2xf-Vy-E3O"/>
                                     <constraint firstAttribute="width" constant="246" id="f4A-hs-Riy"/>
                                 </constraints>
                                 <color key="minimumTrackTintColor" red="1" green="0.2669975768570193" blue="0.28159027505175005" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.41463511330000002" green="1" blue="0.56402774389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.35463907389999999" green="0.46025715239999998" blue="0.92918669870000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.33473680356905905" green="0.52964254416368095" blue="0.72151442307692304" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -103,6 +103,9 @@
                                         <include reference="f4A-hs-Riy"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YIs-uQ-PAZ"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.79062089152977266" blue="0.030378438566355331" alpha="1" colorSpace="calibratedRGB"/>
@@ -180,6 +183,7 @@
                     <connections>
                         <outlet property="nameField" destination="lf2-hj-bCX" id="bhm-YE-FOE"/>
                         <outlet property="numberField" destination="Ja5-nS-bN2" id="t7i-6W-9nf"/>
+                        <outlet property="sliderLabel" destination="Ne5-Wu-FvU" id="Sh8-Qf-eXf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
