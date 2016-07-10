@@ -310,7 +310,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
-        <image name="blueButton" width="29" height="37"/>
+        <image name="blueButton" width="29" height="45"/>
         <image name="whiteButton" width="28" height="44"/>
     </resources>
 </document>
