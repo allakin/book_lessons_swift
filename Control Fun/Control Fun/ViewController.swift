@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var nameField: UITextField!
 	@IBOutlet weak var numberField: UITextField!
 	@IBOutlet weak var sliderLabel: UILabel!
-	
+	@IBOutlet weak var leftSwitch: UISwitch!
+	@IBOutlet weak var rightSwitch: UISwitch!
 	
 	//закрытие клавиатуры когда прошло касание
 	@IBAction func textFieldDoneEditing(sender: UITextField) {
@@ -34,6 +35,11 @@ class ViewController: UIViewController {
 		sliderLabel.text = "\(progress)"
 	}
 	
+	@IBAction func switchChanged(sender: UISwitch) {
+		let setting = sender.on
+		leftSwitch.setOn(setting, animated: true)
+		rightSwitch.setOn(setting, animated: true)
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
