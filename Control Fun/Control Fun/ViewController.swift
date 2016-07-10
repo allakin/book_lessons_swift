@@ -36,7 +36,9 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func switchChanged(sender: UISwitch) {
+		//переменная кнопка включенна
 		let setting = sender.on
+		//левый и правый switch по умолчанию включен если
 		leftSwitch.setOn(setting, animated: true)
 		rightSwitch.setOn(setting, animated: true)
 	}
