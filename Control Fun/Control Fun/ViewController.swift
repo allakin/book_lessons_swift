@@ -14,7 +14,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var numberField: UITextField!
 	@IBOutlet weak var sliderLabel: UILabel!
 	@IBOutlet weak var leftSwitch: UISwitch!
-	@IBOutlet weak var rightSwitch: UISwitch!
+	@IBOutlet weak var rightSwitch: UISwitch!	
+	@IBOutlet weak var doSomethingButton: UISegmentedControl!
 	
 	//закрытие клавиатуры когда прошло касание
 	@IBAction func textFieldDoneEditing(sender: UITextField) {
@@ -41,6 +42,21 @@ class ViewController: UIViewController {
 		//левый и правый switch по умолчанию включен если
 		leftSwitch.setOn(setting, animated: true)
 		rightSwitch.setOn(setting, animated: true)
+		doSomethingButton.hidden = false
+	}
+	
+	
+	@IBAction func toggleControls(sender: UISegmentedControl) {
+		//нажатие на сименты контролера
+		if sender.selectedSegmentIndex == 0 {
+			leftSwitch.hidden = false
+			rightSwitch.hidden = false
+			doSomethingButton.hidden = true
+		} else {
+			leftSwitch.hidden = true 
+			rightSwitch.hidden = true
+			doSomethingButton.hidden = false
+		}
 	}
 	
 	override func viewDidLoad() {
