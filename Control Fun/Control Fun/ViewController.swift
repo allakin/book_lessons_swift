@@ -59,6 +59,7 @@ class ViewController: UIViewController {
 		}
 	}
 	
+	// алерт по нажитию на button
 	@IBAction func buttonPressed(sender: UIButton){
 		let controller = UIAlertController(title: "You are Sure?", message: nil , preferredStyle: .ActionSheet)
 		let yesAction = UIAlertAction(title: "Yes, I'm sure!", style: .Destructive, handler: { action in
