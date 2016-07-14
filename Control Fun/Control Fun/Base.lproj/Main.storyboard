@@ -186,6 +186,9 @@
                                         <include reference="DFV-AU-Xc5"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSo-iY-INz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.79062089152977266" blue="0.030378438566355331" alpha="1" colorSpace="calibratedRGB"/>
