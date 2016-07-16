@@ -61,16 +61,22 @@ class ViewController: UIViewController {
 	
 	// алерт по нажитию на button
 	@IBAction func buttonPressed(sender: UIButton){
+		//создаем алерт
 		let controller = UIAlertController(title: "You are Sure?", message: nil , preferredStyle: .ActionSheet)
+		//создаю кнопку true
 		let yesAction = UIAlertAction(title: "Yes, I'm sure!", style: .Destructive, handler: { action in
+		//создаю проверку наличие текст в инпуте в зависимости от этого отображается текст
 		let msg = self.nameField.text!.isEmpty ? "You can breathe easy, everything went OK." : "You can breathe easy, \(self.nameField.text)," + " everything went OK."
+		//новый алерт контролер
 		let controller2 = UIAlertController(title:"Something Was Done",message: msg, preferredStyle: .Alert)
+		//кнопка отмены для первого алерт контролера
 		let cancelAction = UIAlertAction(title: "Cancel",style: .Cancel, handler: nil)
+		//отображения кнопки в контролере
 		controller2.addAction(cancelAction); self.presentViewController(controller2, animated: true, completion: nil)
 		})
-		
+		//кнопка отмены для первого алерт контролера
 		let noAction = UIAlertAction(title: "No way!", style: .Cancel, handler: nil)
-		
+		//отображения кнопки в контролере
 		controller.addAction(yesAction); self.presentViewController(controller, animated: true, completion: nil)
 		controller.addAction(noAction)
 		
@@ -78,7 +84,7 @@ class ViewController: UIViewController {
 			ppc.sourceView = sender
 			ppc.sourceRect = sender.bounds
 		}
-		
+
 	}
 	
 	override func viewDidLoad() {
