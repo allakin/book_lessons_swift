@@ -290,6 +290,7 @@
 				73F5DA7E1D3DF15D001B862B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
