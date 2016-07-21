@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		737C258A1D41560B00896F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C25891D41560B00896F0D /* AppDelegate.swift */; };
-		737C258C1D41560B00896F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C258B1D41560B00896F0D /* ViewController.swift */; };
 		737C258F1D41560B00896F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737C258D1D41560B00896F0D /* Main.storyboard */; };
 		737C25911D41560B00896F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737C25901D41560B00896F0D /* Assets.xcassets */; };
 		737C25941D41560B00896F0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 737C25921D41560B00896F0D /* LaunchScreen.storyboard */; };
+		737C259C1D41573A00896F0D /* SwitchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C259B1D41573A00896F0D /* SwitchingViewController.swift */; };
+		737C25A01D41585500896F0D /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C259F1D41585500896F0D /* BlueViewController.swift */; };
+		737C25A21D41588000896F0D /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C25A11D41588000896F0D /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		737C25861D41560B00896F0D /* View Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "View Switcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		737C25891D41560B00896F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		737C258B1D41560B00896F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		737C258E1D41560B00896F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		737C25901D41560B00896F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		737C25931D41560B00896F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		737C25951D41560B00896F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737C259B1D41573A00896F0D /* SwitchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchingViewController.swift; sourceTree = "<group>"; };
+		737C259F1D41585500896F0D /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		737C25A11D41588000896F0D /* YellowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				737C25891D41560B00896F0D /* AppDelegate.swift */,
-				737C258B1D41560B00896F0D /* ViewController.swift */,
+				737C259B1D41573A00896F0D /* SwitchingViewController.swift */,
+				737C25A11D41588000896F0D /* YellowViewController.swift */,
+				737C259F1D41585500896F0D /* BlueViewController.swift */,
 				737C258D1D41560B00896F0D /* Main.storyboard */,
 				737C25901D41560B00896F0D /* Assets.xcassets */,
 				737C25921D41560B00896F0D /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				737C258C1D41560B00896F0D /* ViewController.swift in Sources */,
+				737C25A21D41588000896F0D /* YellowViewController.swift in Sources */,
 				737C258A1D41560B00896F0D /* AppDelegate.swift in Sources */,
+				737C25A01D41585500896F0D /* BlueViewController.swift in Sources */,
+				737C259C1D41573A00896F0D /* SwitchingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
