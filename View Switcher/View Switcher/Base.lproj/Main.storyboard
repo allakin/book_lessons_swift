@@ -23,7 +23,7 @@
                                 <items>
                                     <barButtonItem title="Switch Views" id="rw1-qZ-foq">
                                         <connections>
-                                            <action selector="switchViews:" destination="BYZ-38-t0r" id="1RB-iR-aVY"/>
+                                            <action selector="switchViews:" destination="BYZ-38-t0r" id="BbW-qE-ZOK"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -41,6 +41,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="338"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="BUN-Fw-lQR">
+            <objects>
+                <viewController storyboardIdentifier="Blue" id="J3J-5o-4fH" customClass="BlueViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0vt-qp-rpV"/>
+                        <viewControllerLayoutGuide type="bottom" id="yKw-sK-FXM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fza-b9-Wx4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-ZD-y8d">
+                                <rect key="frame" x="235" y="279" width="131" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Press to Me">
+                                    <color key="titleColor" red="0.91988942747551183" green="1" blue="0.9688673295471818" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="blueButtonPressed:" destination="J3J-5o-4fH" eventType="touchUpInside" id="QQT-aF-P3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39671595826477069" green="0.57985213981769645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zlu-ZD-y8d" firstAttribute="centerY" secondItem="fza-b9-Wx4" secondAttribute="centerY" id="LNh-d6-lzR"/>
+                            <constraint firstItem="Zlu-ZD-y8d" firstAttribute="centerX" secondItem="fza-b9-Wx4" secondAttribute="centerX" id="W8l-ag-Xsi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWU-Oj-Duq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="338"/>
+        </scene>
+        <!--Yellow View Controller-->
+        <scene sceneID="XC2-Jm-w83">
+            <objects>
+                <viewController storyboardIdentifier="Yellow" id="RXc-TH-hNC" customClass="YellowViewController" customModule="View_Switcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qzN-vQ-RCM"/>
+                        <viewControllerLayoutGuide type="bottom" id="ynH-E9-zzB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lqJ-uY-0B1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38f-Rn-2wn">
+                                <rect key="frame" x="269" y="279" width="62" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Press">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="yellowButtonPressed:" destination="RXc-TH-hNC" eventType="touchUpInside" id="Njy-bX-o85"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.98569441633674049" blue="0.38153861567767355" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="38f-Rn-2wn" firstAttribute="centerY" secondItem="lqJ-uY-0B1" secondAttribute="centerY" id="bVJ-MM-WM0"/>
+                            <constraint firstItem="38f-Rn-2wn" firstAttribute="centerX" secondItem="lqJ-uY-0B1" secondAttribute="centerX" id="rqC-w9-muX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMM-cc-QEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533" y="338"/>
         </scene>
     </scenes>
 </document>
