@@ -61,7 +61,7 @@
                                     <color key="titleColor" red="0.91988942747551183" green="1" blue="0.9688673295471818" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="blueButtonPressed:" destination="J3J-5o-4fH" eventType="touchUpInside" id="QQT-aF-P3d"/>
+                                    <action selector="blueButtonPressed:" destination="J3J-5o-4fH" eventType="touchUpInside" id="2Ke-4C-DFd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,7 +95,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="yellowButtonPressed:" destination="RXc-TH-hNC" eventType="touchUpInside" id="Njy-bX-o85"/>
+                                    <action selector="clickYellowViewController:" destination="RXc-TH-hNC" eventType="touchUpInside" id="cLI-1J-8e2"/>
                                 </connections>
                             </button>
                         </subviews>

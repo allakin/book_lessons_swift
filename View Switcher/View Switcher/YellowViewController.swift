@@ -22,13 +22,15 @@ class YellowViewController: UIViewController {
     }
 	
 	
-	
-//	@IBAction func yellowButtonPressed(sender: UIButton) {
-//		let alert = UIAlertController(title: "Yellow View Button Pressed", message: "You pressed the button on the yellow view", preferredStyle: .Alert)
-//		let action = UIAlertAction(title: "Yep, I did", style: .Default, handler: nil)
-//		alert.addAction(action)
-//		presentViewController(alert, animated: true, completion: nil)
-//	}
+	@IBAction func clickYellowViewController(sender: UIButton) {
+		
+		let alertController = UIAlertController(title: "Yellow View Button Pressed", message: "You pressed the button on the yellow view", preferredStyle: .Alert)
+		let yesButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+		alertController.addAction(yesButton)
+		presentViewController(alertController, animated: true, completion: nil)
+		
+	}
+
 
     /*
     // MARK: - Navigation
